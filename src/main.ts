@@ -11,6 +11,10 @@ import { Router } from '/@/router';
 // i18n
 import messages from '@intlify/vite-plugin-vue-i18n/messages';
 
+
+// Pinia
+import {createPinia} from "pinia";
+
 const i18n = createI18n({
   locale: 'en',
   messages,
@@ -25,5 +29,7 @@ const app = createApp(App);
 app.use(i18n);
 
 app.use(Router);
+
+app.use(createPinia())
 
 app.mount('#app');

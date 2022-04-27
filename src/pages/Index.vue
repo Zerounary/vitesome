@@ -4,6 +4,7 @@ import { useI18n } from 'vue-i18n';
 import { defineComponent, ref } from 'vue';
 import { useTheme } from '/@/composables';
 
+
 export default defineComponent({
   name: 'Home',
   setup() {
@@ -23,7 +24,7 @@ export default defineComponent({
       show.value = true;
     }, 1000);
 
-    return { t, show, toggleLocales, toggleDark };
+    return { t, show,  toggleLocales, toggleDark };
   },
 });
 </script>

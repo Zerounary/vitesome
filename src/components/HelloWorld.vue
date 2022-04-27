@@ -2,6 +2,9 @@
 import { defineComponent } from 'vue';
 import { useI18n } from 'vue-i18n';
 
+import { useCounterStore } from '/@/stores/counter';
+import { storeToRefs } from 'pinia';
+
 export default defineComponent({
   name: 'HelloWorld',
   props: {
@@ -12,8 +15,14 @@ export default defineComponent({
   },
   setup: () => {
     const { t } = useI18n();
-    
-    return { t };
+
+    const counterStore = useCounterStore();
+    // 取
+    const { count } = storeToRefs(counterStore);
+
+    const { increment } = counterStore;
+
+    return { t, count, increment };
   },
 });
 </script>
@@ -22,7 +31,7 @@ export default defineComponent({
     <h1 class="font-serif font-bold font-bold text-4xl mb-8">{{ msg }}</h1>
 
     <p>
-      {{t('recomended-ide')}}
+      {{ t('recomended-ide') }}
       <a href="https://code.visualstudio.com/" target="_blank">VSCode</a>
       +
       <a
@@ -33,11 +42,14 @@ export default defineComponent({
       </a>
       or
       <a href="https://github.com/johnsoncodehk/volar" target="_blank">Volar</a>
-      ({{t('if-using')}}
-      <code>&lt;script setup&gt;</code>)
+      ({{ t('if-using') }} <code>&lt;script setup&gt;</code>)
     </p>
 
-    <p>{{t('See')}} <code>README.md</code> {{t('more-info')}}</p>
+    <p>{{ t('See') }} <code>README.md</code> {{ t('more-info') }}</p>
+    <button class="bg-blue-400 px-2 py-1 text-white rounded" @click="increment">
+      <span class="text-xl">{{ count }}</span>
+      <span class="text-xl">{{ t('click-me') }}</span>
+    </button>
     <p class="mb-10">
       <a href="https://vitejs.dev/guide/features.html" target="_blank">
         Vite Docs

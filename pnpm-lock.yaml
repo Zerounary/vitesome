@@ -8,6 +8,7 @@ specifiers:
   '@vitejs/plugin-vue': ^2.3.1
   '@vueuse/core': ^8.2.4
   pathe: ^0.2.0
+  pinia: ^2.0.13
   typescript: ^4.6.3
   unplugin-vue-components: ^0.18.5
   vite: ^2.9.1
@@ -22,6 +23,7 @@ specifiers:
   windicss: ^3.5.1
 
 dependencies:
+  pinia: 2.0.13_typescript@4.6.3+vue@3.2.31
   vue: 3.2.31
   vue-i18n: 9.2.0-beta.34_vue@3.2.31
   vue-router: 4.0.14_vue@3.2.31
@@ -78,8 +80,8 @@ packages:
     resolution: {integrity: sha512-Jh0llaK2LRXQoYsorIH8maClebsnzTcve+7U3rQUSnC11X4jtPnFuyatqFLvMxZ8MLG8dB4zfHsbPfuvxluONw==}
     dev: true
 
-  /@intlify/bundle-utils/2.2.1_vue-i18n@9.2.0-beta.34:
-    resolution: {integrity: sha512-8n8zhYEKypS+KP22KUAC6BnQifJDDWUGcn3OVPqsThqMMucU22MShGvOuiKqQ4AeT7XQ5O4pudlJmxv3L91JrQ==}
+  /@intlify/bundle-utils/3.0.0_vue-i18n@9.2.0-beta.34:
+    resolution: {integrity: sha512-y43Z5Q3ZJvxqtD8xUH6U3yrlZeay7ZTqkzv1GQ4b0mGQtk5uptOT9Ra4qvGuUv8QyPQsortrA/OHWUD5ax5ZNQ==}
     engines: {node: '>= 12'}
     peerDependencies:
       petite-vue-i18n: '*'
@@ -90,8 +92,8 @@ packages:
       vue-i18n:
         optional: true
     dependencies:
-      '@intlify/message-compiler': 9.2.0-beta.34
-      '@intlify/shared': 9.2.0-beta.34
+      '@intlify/message-compiler': 9.2.0-beta.35
+      '@intlify/shared': 9.2.0-beta.35
       jsonc-eslint-parser: 1.4.1
       source-map: 0.6.1
       vue-i18n: 9.2.0-beta.34_vue@3.2.31
@@ -121,10 +123,25 @@ packages:
     dependencies:
       '@intlify/shared': 9.2.0-beta.34
       source-map: 0.6.1
+    dev: false
+
+  /@intlify/message-compiler/9.2.0-beta.35:
+    resolution: {integrity: sha512-wYQCgnRtyJ40HK3bJTrszHDaxqDXZH+9Ps7RsXNuNwZ9hIb1cVkLiUNIbuJS/XSJ1kATJXA6K+4if6ZLb0Ozxw==}
+    engines: {node: '>= 12'}
+    dependencies:
+      '@intlify/shared': 9.2.0-beta.35
+      source-map: 0.6.1
+    dev: true
 
   /@intlify/shared/9.2.0-beta.34:
     resolution: {integrity: sha512-hbUKcVbTOkLVpnlSeZE1OPgEI7FpvhuZF/gb84xECTjXEImIa3u0fIcJKUUffv3dlAx8fMOE5xKgDzngidm0tw==}
     engines: {node: '>= 12'}
+    dev: false
+
+  /@intlify/shared/9.2.0-beta.35:
+    resolution: {integrity: sha512-DXf7xrwf08GKhr93XPQ8EgaEN0CIELl+mAS6SlRhi/aLtZv5HSGSMkz4M/ICwoWzFLSgOx/ZdBSasex19MMogg==}
+    engines: {node: '>= 12'}
+    dev: true
 
   /@intlify/vite-plugin-vue-i18n/3.3.1_c28e454bdb294ebb65e8fb37b6c0e7ce:
     resolution: {integrity: sha512-b9HIUANzL4/LmrA5RqeiPabZl2/RiWNAJ90TVZ8kSi3APRZ4BbmwUAclKe8ip+1jCDhqaGO/qfAI7SbQ0Y76Uw==}
@@ -139,8 +156,8 @@ packages:
       vue-i18n:
         optional: true
     dependencies:
-      '@intlify/bundle-utils': 2.2.1_vue-i18n@9.2.0-beta.34
-      '@intlify/shared': 9.2.0-beta.34
+      '@intlify/bundle-utils': 3.0.0_vue-i18n@9.2.0-beta.34
+      '@intlify/shared': 9.2.0-beta.35
       '@rollup/pluginutils': 4.1.2
       debug: 4.3.3
       fast-glob: 3.2.11
@@ -330,6 +347,10 @@ packages:
 
   /@vue/devtools-api/6.0.12:
     resolution: {integrity: sha512-iO/4FIezHKXhiDBdKySCvJVh8/mZPxHpiQrTy+PXVqJZgpTPTdHy4q8GXulaY+UKEagdkBb0onxNQZ0LNiqVhw==}
+    dev: false
+
+  /@vue/devtools-api/6.1.4:
+    resolution: {integrity: sha512-IiA0SvDrJEgXvVxjNkHPFfDx6SXw0b/TUkqMcDZWNg9fnCAHbTpoo59YfJ9QLFkwa3raau5vSlRVzMSLDnfdtQ==}
     dev: false
 
   /@vue/reactivity-transform/3.2.31:
@@ -1106,6 +1127,24 @@ packages:
     engines: {node: '>=8.6'}
     dev: true
 
+  /pinia/2.0.13_typescript@4.6.3+vue@3.2.31:
+    resolution: {integrity: sha512-B7rSqm1xNpwcPMnqns8/gVBfbbi7lWTByzS6aPZ4JOXSJD4Y531rZHDCoYWBwLyHY/8hWnXljgiXp6rRyrofcw==}
+    peerDependencies:
+      '@vue/composition-api': ^1.4.0
+      typescript: '>=4.4.4'
+      vue: ^2.6.14 || ^3.2.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+      typescript:
+        optional: true
+    dependencies:
+      '@vue/devtools-api': 6.1.4
+      typescript: 4.6.3
+      vue: 3.2.31
+      vue-demi: 0.12.1_vue@3.2.31
+    dev: false
+
   /postcss/8.4.12:
     resolution: {integrity: sha512-lg6eITwYe9v6Hr5CncVbK70SoioNQIq81nsaG86ev5hAidQvmOeETBqs7jm43K2F5/Ley3ytDtriImV6TpNiSg==}
     engines: {node: ^10 || ^12 || >=14}
@@ -1415,7 +1454,6 @@ packages:
         optional: true
     dependencies:
       vue: 3.2.31
-    dev: true
 
   /vue-i18n/9.2.0-beta.34_vue@3.2.31:
     resolution: {integrity: sha512-AKzOMn91OKBKHTPVWrDF+kBSbYYNGfBeeBhuihkxW2ZTXd1l8vp7WBqA6weV9kb9EDv7HO61Qhctqcr79TmHVw==}
