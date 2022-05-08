@@ -87,12 +87,12 @@ export default defineComponent({
 
       <span class="text-xs"
         >{{ t('made_by') }}
-        <a
+        <router-link
           class="footer-link text-cyan-400 hover:text-cyan-500"
-          href="https://github.com/alvarosabu/vitesome"
+          to="about"
           rel="noreferrer"
           target="_blank"
-          >Alvaro Saburido</a
+          >About</router-link
         ></span
       >
     </footer>
