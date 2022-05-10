@@ -6,10 +6,16 @@
     "dev": "vite --open --host",
     "build": "vue-tsc --noEmit && vite build",
     "test": "vitest",
+    "test-one": "vitest run",
     "coverage": "vitest --coverage",
     "serve": "vite preview",
     "commit": "git-cz -a",
     "release": "standard-version -a"
+  },
+  "config": {
+    "ghooks": {
+      "pre-commit": "npm run test-one"
+    }
   },
   "dependencies": {
     "pinia": "^2.0.13",
@@ -27,6 +33,7 @@
     "c8": "^7.11.2",
     "commitizen": "^4.2.4",
     "cz-conventional-changelog": "^3.3.0",
+    "ghooks": "^2.0.4",
     "pathe": "^0.2.0",
     "standard-version": "^9.3.2",
     "typescript": "^4.6.3",

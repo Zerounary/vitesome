@@ -10,6 +10,7 @@ specifiers:
   c8: ^7.11.2
   commitizen: ^4.2.4
   cz-conventional-changelog: ^3.3.0
+  ghooks: ^2.0.4
   pathe: ^0.2.0
   pinia: ^2.0.13
   standard-version: ^9.3.2
@@ -44,6 +45,7 @@ devDependencies:
   c8: 7.11.2
   commitizen: 4.2.4
   cz-conventional-changelog: 3.3.0
+  ghooks: 2.0.4
   pathe: 0.2.0
   standard-version: 9.3.2
   typescript: 4.6.3
@@ -955,6 +957,23 @@ packages:
 
   /color-name/1.1.4:
     resolution: {integrity: sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==}
+    dev: true
+
+  /colors/0.6.2:
+    resolution: {integrity: sha1-JCP+ZnisDF2uiFLl0OW+CMmXq8w=}
+    engines: {node: '>=0.1.90'}
+    dev: true
+
+  /commander/2.1.0:
+    resolution: {integrity: sha1-0SG7roYNmZKj1Re6lvVliOR8Z4E=}
+    engines: {node: '>= 0.6.x'}
+    dev: true
+
+  /commander/2.9.0:
+    resolution: {integrity: sha1-nJkJQXbhIkDLItbFFGCYQA/g99Q=}
+    engines: {node: '>= 0.6.x'}
+    dependencies:
+      graceful-readlink: 1.0.1
     dev: true
 
   /commander/7.2.0:
@@ -1880,6 +1899,15 @@ packages:
       resolve-dir: 1.0.1
     dev: true
 
+  /findup/0.1.5:
+    resolution: {integrity: sha1-itkpozk7rGJ5V6fl3kYjsGsOLOs=}
+    engines: {node: '>=0.6'}
+    hasBin: true
+    dependencies:
+      colors: 0.6.2
+      commander: 2.1.0
+    dev: true
+
   /follow-redirects/1.14.9_debug@4.3.3:
     resolution: {integrity: sha512-MQDfihBQYMcyy5dhRDJUHcw7lb2Pv/TuE6xP1vyraLukNDHKbDxDNaOE3NbCAdKQApno+GPRyo1YAp89yCjK4w==}
     engines: {node: '>=4.0'}
@@ -1995,6 +2023,18 @@ packages:
       get-intrinsic: 1.1.1
     dev: true
 
+  /ghooks/2.0.4:
+    resolution: {integrity: sha1-/VDgQP9UiQauQstReToBv+JFZ7k=}
+    requiresBuild: true
+    dependencies:
+      findup: 0.1.5
+      lodash.clone: 4.5.0
+      manage-path: 2.0.0
+      opt-cli: 1.5.1
+      path-exists: 3.0.0
+      spawn-command: 0.0.2
+    dev: true
+
   /git-raw-commits/2.0.11:
     resolution: {integrity: sha512-VnctFhw+xfj8Va1xtfEqCUD2XDrbAPSJx+hSrE5K7fGdjZruW7XV+QOrN7LF/RJyvspRiD2I0asWsxFp0ya26A==}
     engines: {node: '>=10'}
@@ -2089,6 +2129,10 @@ packages:
 
   /graceful-fs/4.2.9:
     resolution: {integrity: sha512-NtNxqUcXgpW2iMrfqSfR73Glt39K+BLwWsPs94yR63v45T0Wbej7eRmL5cWfwEgqXnmjQp3zaJTshdRW/qC2ZQ==}
+    dev: true
+
+  /graceful-readlink/1.0.1:
+    resolution: {integrity: sha1-TK+tdrxi8C+gObL5Tpo906ORpyU=}
     dev: true
 
   /handlebars/4.7.7:
@@ -2580,6 +2624,20 @@ packages:
       p-locate: 5.0.0
     dev: true
 
+  /lodash._baseclone/4.5.7:
+    resolution: {integrity: sha1-zkKt4IOE711i+nfDD2GkbmhvhDQ=}
+    dev: true
+
+  /lodash.clone/4.3.2:
+    resolution: {integrity: sha1-5WsXa2gjp93jj38r9Y3n1ZcSAOk=}
+    dependencies:
+      lodash._baseclone: 4.5.7
+    dev: true
+
+  /lodash.clone/4.5.0:
+    resolution: {integrity: sha1-GVhwRQ9aExkkeN9Lw9I9LeoZB7Y=}
+    dev: true
+
   /lodash.ismatch/4.4.0:
     resolution: {integrity: sha1-dWy1FQyjum8RCFp4hJZF8Yj4Xzc=}
     dev: true
@@ -2633,6 +2691,10 @@ packages:
     resolution: {integrity: sha512-s8UhlNe7vPKomQhC1qFelMokr/Sc3AgNbso3n74mVPA5LTZwkB9NlXf4XPamLxJE8h0gh73rM94xvwRT2CVInw==}
     dev: true
     optional: true
+
+  /manage-path/2.0.0:
+    resolution: {integrity: sha1-9M+EV7km7u4qg7FzUBQUvHbrlZc=}
+    dev: true
 
   /map-obj/1.0.1:
     resolution: {integrity: sha1-2TPOuSBdgr3PSIb2dCvcK03qFG0=}
@@ -2834,6 +2896,16 @@ packages:
     engines: {node: '>=4'}
     dependencies:
       mimic-fn: 1.2.0
+    dev: true
+
+  /opt-cli/1.5.1:
+    resolution: {integrity: sha1-BNtEexPJa5kusxaFJm9O0NlzbcI=}
+    hasBin: true
+    dependencies:
+      commander: 2.9.0
+      lodash.clone: 4.3.2
+      manage-path: 2.0.0
+      spawn-command: 0.0.2-1
     dev: true
 
   /os-tmpdir/1.0.2:
@@ -3316,6 +3388,14 @@ packages:
 
   /sourcemap-codec/1.4.8:
     resolution: {integrity: sha512-9NykojV5Uih4lgo5So5dtw+f0JgJX30KCNI8gwhz2J9A15wD0Ml6tjHKwf6fTSa6fAdVBdZeNOs9eJ71qCk8vA==}
+
+  /spawn-command/0.0.2:
+    resolution: {integrity: sha1-lUThpDygRfhTGqwaSMspva5iM44=}
+    dev: true
+
+  /spawn-command/0.0.2-1:
+    resolution: {integrity: sha1-YvXpRmmBwbeW3Fkpk34RycaSG9A=}
+    dev: true
 
   /spdx-correct/3.1.1:
     resolution: {integrity: sha512-cOYcUWwhCuHCXi49RhFRCyJEK3iPj1Ziz9DpViV3tbZOwXD49QzIN3MpOLJNxh2qwq2lJJZaKMVw9qNi4jTC0w==}
