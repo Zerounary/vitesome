@@ -43,7 +43,7 @@ export default defineComponent({
           v-if="show"
           alt="Vitesome logo"
           class="w-52 mx-auto mb-12"
-          :src="'imagotype.svg'"
+          :src="'assets/imagotype.svg'"
         />
       </transition>
     </div>
