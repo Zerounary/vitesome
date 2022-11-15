@@ -3,7 +3,10 @@ import typography from 'windicss/plugin/typography';
 
 export default defineConfig({
   darkMode: 'class',
-  plugins: [typography()],
+  plugins: [typography(),require('@windicss/plugin-scrollbar'),],
+  variants: {
+    scrollbar: ['rounded']
+  },
   theme: {
     fontFamily: {
       sans: ['Open Sans', 'ui-sans-serif', 'system-ui'],

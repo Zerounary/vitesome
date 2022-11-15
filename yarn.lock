@@ -629,6 +629,11 @@
     "jiti" "^1.13.0"
     "windicss" "^3.5.1"
 
+"@windicss/plugin-scrollbar@^1.2.3":
+  "integrity" "sha512-+cqv1pEmaNPITeBJ/lO6tc8IjBzRhQ+V9G8r249MMXivYoxUO4DtModBrRGHVvBgsYZgPXDsIv2jqtxc4NqYEg=="
+  "resolved" "https://registry.npmjs.org/@windicss/plugin-scrollbar/-/plugin-scrollbar-1.2.3.tgz"
+  "version" "1.2.3"
+
 "@windicss/plugin-utils@1.8.4":
   "integrity" "sha512-DqJVwAfzlgd8nYSNlmhXOey32pI8UwH7QiOWdFS/AR2O/q9oLDGHDn97Its/kZdfoyhi8ylwZNP2Pk0H7cihhQ=="
   "resolved" "https://registry.npmjs.org/@windicss/plugin-utils/-/plugin-utils-1.8.4.tgz"
